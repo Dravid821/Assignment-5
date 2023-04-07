@@ -117,7 +117,7 @@ export default function Cardmap() {
                           </h5>
                         </div>
                       </div>
-                      <button type="button" class="btn btn-dark">
+                      <button type="button" class="btn btn-dark" id="view">
                         <NavLink
                           to={`/${item.id}`}
                           className="slink text-white"

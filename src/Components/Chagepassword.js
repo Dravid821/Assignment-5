@@ -126,7 +126,7 @@ export default function ResetPasswordForm() {
                 ) : null}{" "}
               </FormControl>
               <Stack spacing={10}>
-                <Button type="submit" bg={"blue.400"} color={"white"}>
+                <Button id= "changepass" type="submit" bg={"blue.400"} color={"white"}>
                  Change Password
                 </Button>
               </Stack>

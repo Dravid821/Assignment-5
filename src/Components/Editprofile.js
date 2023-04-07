@@ -169,6 +169,7 @@ export default function UserProfileEdit() {
             <Stack spacing={6} direction={["column", "row"]} pt={5}>
               <NavLink to={`/product`}>
               <Button
+                id="cancel"
                 bg={"red.400"}
                 color={"white"}
                 w="full"
@@ -180,6 +181,7 @@ export default function UserProfileEdit() {
               </Button>
               </NavLink>
               <Button
+                id="submit"
                 type="submit"
                 bg={"blue.400"}
                 color={"white"}

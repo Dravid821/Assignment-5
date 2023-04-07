@@ -1,5 +1,10 @@
 describe("login", () => {
-  
+    it("visibility of login page element", () => {
+        cy.visit('http://localhost:3000/login');
+        cy.get('#submit').should('be.visible');
+        cy.get('#email').should('be.visible');
+        cy.get('#password').should('be.visible');
+    })
     it("if invalid Credential", () => {
         cy.window().then((win) => {
           win.localStorage.setItem("isLogin", false);

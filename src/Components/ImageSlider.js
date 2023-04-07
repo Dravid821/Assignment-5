@@ -12,5 +12,4 @@ const ImageSlider = ({ images }) => {
     </Carousel>
   );
 };
-
 export default ImageSlider;
