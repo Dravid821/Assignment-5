@@ -41,9 +41,9 @@ export default function Login() {
 
       onSubmit: (values, action) => {
         console.log("Form-data", values);
-        values.isActive = "false";
+        values.isActive = false;
         let signupdata = JSON.parse(localStorage.getItem("signUpData"));
-        console.log(signupdata);
+        // console.log(signupdata);
         if (signupdata !== null) {
           let filter = signupdata.filter((item) => item.email === values.email);
           console.log();
@@ -53,8 +53,9 @@ export default function Login() {
             toast.success("Login Successfully");
              navigate("/log")
           } else {
-            toast.error("Invalid Data Entered.");
-            action.resetForm();
+            filter[0].isActive = false;
+            localStorage.setItem("isLogin", false);
+            toast.error("Invalid Data Entered.")
           }
         } else {
           toast.error("You need To Register First");
